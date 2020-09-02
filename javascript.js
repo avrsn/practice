@@ -4,6 +4,7 @@ function $(x) {
 }
 
 
+
 image_tracker = "tiger";
 function change() {
     let pic = $("picture");
@@ -21,9 +22,7 @@ function change() {
 
 
 
-
-
-function getInfo() {
+function login() {
 
    
     let logins = [];
@@ -46,11 +45,58 @@ function getInfo() {
           if (logins[i][1] == password) {
               console.log("Login found.");
               loginFailure = false;
+              return;
           }
         }
     }
 
     if (loginFailure == true) {
         console.log(loginFailureMessage);
+    }
+}
+
+
+let objPeople = [
+    {
+        username: "Donald",
+        password: "Duck"
+    },
+    {
+        username: "Lucy",
+        password: "Lu"
+    },
+    {
+        username: "Cory",
+        password: "Walker"
+    }
+]
+function checkRegistration() {
+    let username = $(username).value;
+    let password = $(password).value;
+
+    let isValidPassword = false;
+
+    if (password.length < 8) {
+        console.log("Passowrd must be at least 8 characters.");
+    } else {
+        isValidPassword = true;
+    }
+
+    if (isValidPassword) {
+
+        for ( let i = 0; i < objPeople.length; i++ ) {
+            if (objPeople[i].username == username) { //check if username exists
+                console.log("Username already exists. Try another one.");
+                return;
+            } else { // create a person object with the persons username and password
+                let person = {
+                    username: username;
+                    password: password;
+                }
+                objPeople.push = {} // push the person into the objPeople array
+                console.log("Your account has been created"); // let user know their account has been created
+            }
+        }
+
     }
 }
