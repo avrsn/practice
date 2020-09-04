@@ -1,3 +1,18 @@
+let objPeople = [
+    {
+        username: "Donald",
+        password: "Duck"
+    },
+    {
+        username: "Lucy",
+        password: "Lu"
+    },
+    {
+        username: "Cory",
+        password: "Walker"
+    }
+]
+
 
 function $(x) {
     return document.getElementById(x);
@@ -55,52 +70,25 @@ function login() {
     }
 }
 
-
-let objPeople = [
-    {
-        username: "Donald",
-        password: "Duck"
-    },
-    {
-        username: "Lucy",
-        password: "Lu"
-    },
-    {
-        username: "Cory",
-        password: "Walker"
-    }
-]
 function checkRegistration() {
     let registerUsername = $("username").value;
     let registerPassword = $("password").value;
-    console.log(objPeople);
-    let isValidPassword = false;
-
-    if (registerPassword.length < 8) {
-        console.log("Password must be at least 8 characters.");
-    } else {
-        isValidPassword = true;
+    
+    let newUser = {
+        username: registerUsername,
+        password: registerPassword
     }
 
-    if (isValidPassword) {
-        console.log(objPeople.length);
-        for ( let i = 0; i < objPeople.length; i++ ) {
-            if (objPeople[i].username == registerUsername) { //check if username exists
-                console.log("Username already exists. Try another one.");
-                return;
-            } else { // create a person object with the persons username and password
-                let person = {
-                    username: registerUsername,
-                    password: registerPassword
-                }
-                
-                console.log("Person object: " + person);
-                objPeople.push = person; // push the person into the objPeople array
-                console.log("Your account has been created"); // let user know their account has been created
-                return;
-            }
+    for (let i = 0; i < objPeople.length; i++) {
+        if (objPeople[i].username == registerUsername) {
+            alert("username taken. try another..");
+            return;
+        } else if (registerPassword.length < 8) {
+            alert("password must be at least 8 characters");
+            return;
         }
-
     }
-    console.log("hey");
+
+    objPeople.push(newUser)
+    console.log(objPeople)
 }
