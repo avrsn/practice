@@ -71,32 +71,36 @@ let objPeople = [
     }
 ]
 function checkRegistration() {
-    let username = $(username).value;
-    let password = $(password).value;
-
+    let registerUsername = $("username").value;
+    let registerPassword = $("password").value;
+    console.log(objPeople);
     let isValidPassword = false;
 
-    if (password.length < 8) {
-        console.log("Passowrd must be at least 8 characters.");
+    if (registerPassword.length < 8) {
+        console.log("Password must be at least 8 characters.");
     } else {
         isValidPassword = true;
     }
 
     if (isValidPassword) {
-
+        console.log(objPeople.length);
         for ( let i = 0; i < objPeople.length; i++ ) {
-            if (objPeople[i].username == username) { //check if username exists
+            if (objPeople[i].username == registerUsername) { //check if username exists
                 console.log("Username already exists. Try another one.");
                 return;
             } else { // create a person object with the persons username and password
                 let person = {
-                    username: username;
-                    password: password;
+                    username: registerUsername,
+                    password: registerPassword
                 }
-                objPeople.push = {} // push the person into the objPeople array
+                
+                console.log("Person object: " + person);
+                objPeople.push = person; // push the person into the objPeople array
                 console.log("Your account has been created"); // let user know their account has been created
+                return;
             }
         }
 
     }
+    console.log("hey");
 }
