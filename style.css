@@ -1,0 +1,29 @@
+.red-text {
+    color: red;
+}
+
+#navbar {
+    display: fixed;
+    height: 80px;
+    border: solid blue 2px;
+}
+
+#login_authenticator {
+    display: block;
+    position: relative;
+    float: right;
+    border: solid red 2px;  
+}
+
+#register {
+    float: right;
+}
+
+#homepage_image {
+    display: block;
+    border: dotted 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+}
+

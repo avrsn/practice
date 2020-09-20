@@ -35,27 +35,35 @@
 <head>
     <title>practice_area</title>
     <script type="text/javascript" src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="Image Changer">
-        <img onclick="change();" title="tiger tat" id="picture" src="tattoo-masters-flash-collection-part1_6_web.jpg" />
+
+    <div id="navbar">
+        <div id="login_authenticator">
+            <form action="index.php" method="POST">
+                <label> Username </label>
+                <input id="username" name="username" type="text" />
+                <label> Password </label>
+                <input id="password" name="password" type="password" />
+                <div class="red-text"><?php echo $errors['login_failure_message']; ?></div>
+                <button type="submit" name="submitBtn" value="Login">Login</button> 
+            </form>
+
+            <div id="register">
+                <a href="registration_page.php"> Register </a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="homepage_image">
+        <img title="tiger tat" id="picture"  src="tattoo-masters-flash-collection-part1_6_web.jpg" />
     </div>
 
-    <div id="Login Authenticator">
-        <form action="index.php" method="POST">
-            <label> Username </label>
-            <input id="username" name="username" type="text" />
-            <label> Password </label>
-            <input id="password" name="password" type="password" />
-            <div class="red-text"><?php echo $errors['login_failure_message']; ?></div>
-            <button type="submit" name="submitBtn" value="Login">Login</button> 
-        </form>
-    </div>
+    
 
-    <div id="Register">
-        <a href="registration_page.php"> Register </a>
-    </div>
+    
 </body>
 
 </html>

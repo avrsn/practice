@@ -33,6 +33,7 @@
     <head> 
         <title> Registration Page </title>
         <script type="text/javascript" src="javascript.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body> 
