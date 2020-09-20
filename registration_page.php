@@ -14,7 +14,7 @@
 
         $hash = password_hash($pass, PASSWORD_DEFAULT);
 
-        $query = "INSERT INTO `users`(`usernameCol`, `passwordCol`) VALUES ('$user', '$hash')";
+        $query = "INSERT INTO `users`(`usernameCol`, `passwordCol`) VALUES ('$user', '$hash');";
 
         $result = mysqli_query($conn, $query);
 
@@ -46,12 +46,12 @@
             <input id="password" name="password" type="password">
             
             <input type="submit" name="submitBtn" value="Submit" />
-            <button type="button" name="save" onclick="checkRegistration()"> Submit </button>
+          
 
         </form>
 
         <div>
-            <a href='index.html'>Home</a>
+            <a href='index.php'>Home</a>
         </div>
 
     </body>
