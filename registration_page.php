@@ -41,7 +41,7 @@
 
         <form action="registration_page.php" method="POST" onSubmit="return checkRegistration()" autocomplete="off">
             <label> Desired Username </label>
-            <input id="username" name="username" type="text" value=<?php echo htmlspecialchars($user) ?>>   
+            <input id="username" name="username" type="text" value=<?php echo htmlspecialchars($user)?>>   
             <div class="red-text"><?php echo $errors['usernameErr']; ?></div>
             <label> Set Password (Must be at least 8 characters) </label>
             <input id="password" name="password" type="password">

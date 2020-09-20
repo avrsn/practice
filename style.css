@@ -2,28 +2,27 @@
     color: red;
 }
 
-#navbar {
-    display: fixed;
-    height: 80px;
-    border: solid blue 2px;
-}
-
 #login_authenticator {
     display: block;
     position: relative;
     float: right;
-    border: solid red 2px;  
 }
 
 #register {
     float: right;
 }
 
+#login_logo {
+    display: block;
+    position: fixed;
+    right: 40%;
+    top: 20%;
+    transform: rotate(134deg);
+}
 #homepage_image {
     display: block;
-    border: dotted 1px;
     margin-left: auto;
     margin-right: auto;
-    width:50%;
+    border: solid red 1px;
 }
 
