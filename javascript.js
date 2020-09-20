@@ -79,16 +79,10 @@ function checkRegistration() {
         password: registerPassword
     }
 
-    for (let i = 0; i < objPeople.length; i++) {
-        if (objPeople[i].username == registerUsername) {
-            alert("username taken. try another..");
-            return;
-        } else if (registerPassword.length < 8) {
-            alert("password must be at least 8 characters");
-            return;
-        }
+    if (registerPassword.length < 8) {
+        alert("Password must be at least 8 characters");
+        return false;
     }
 
-    objPeople.push(newUser)
-    console.log(objPeople)
+    return true;
 }

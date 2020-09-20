@@ -16,12 +16,12 @@
             <input id="username" type="text" />
             <label> Password </label>
             <input id="password" type="text" />
-            <button type="button" onclick="login()">Submit</button> 
+            <button type="button" action="index.php" >Login</button> 
         </form>
     </div>
 
     <div id="Register">
-        <a href="registration.html"> Register </a>
+        <a href="registration_page.php"> Register </a>
     </div>
 </body>
 
