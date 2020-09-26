@@ -37,7 +37,7 @@
 <head>
     <title>practice_area</title>
     <script type="text/javascript" src="javascript.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index_style.css">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
             <form action="index.php" method="POST">
                 <label> Username </label>
                 <input id="username" name="username" type="text" value=<?php echo htmlspecialchars($user)?> >
-</br>
+                </br>
                 <label> Password </label>
                 <input id="password" name="password" type="password" >
                 <div class="red-text"><?php echo $errors['login_failure_message']; ?></div>
@@ -57,12 +57,14 @@
             </div>
         </div>
 
+    
+
     <div id="login_logo">
         <img title="red_login" id="red_login" src="login 460x301.png" />
     </div>
 
     <div id="homepage_image">
-        <img title="tiger tat" id="picture"  src="tiger.png" />
+        <img title="tiger tat" id="picture"  src="tiger 2.png" />
     </div>
 
     

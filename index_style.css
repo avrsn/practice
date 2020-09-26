@@ -1,0 +1,104 @@
+html {
+    display: inline;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fdf0e8;
+} 
+
+body {
+    width: 100%;
+    height: 100%;
+    margin-right: 10%;
+
+}
+
+.red-text {
+    position: relative;
+    color: red;
+    left: 5%;
+}
+
+#login_authenticator {
+    z-index: 1;
+    display: block;
+    position: fixed;
+
+    width: 25%;
+    height: 25%;
+    left: 52%;
+    top: 37%; 
+    background-color: #332b29;
+    opacity: .97;
+
+    border-radius: 15px;
+}
+
+label {
+    color: #ffffff;
+    position: relative;
+    left: 5%;
+    
+}
+
+input[type=text], input[type=password] {
+    position: relative;
+    left: 5%;
+    height: 30px;
+    width: 90%;
+    border: solid #5675a6 1px;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+
+button {
+    position: relative;
+    background-color: #5675a6;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    width: 92%;
+    left: 4%;
+}
+
+button:hover {
+    opacity: .75;
+}
+
+#register {
+    position: relative;
+   
+    margin-left: 42%;
+    margin-right: 40%;
+    width: 20%;
+}
+
+#login_logo {
+    z-index: -1;
+    display: inline;
+    position: fixed;
+    
+    margin-left: 23%;
+    margin-top: 8%;
+    
+    transform: rotate(334deg);
+
+    
+}
+#homepage_image {
+    z-index: 1;
+    display: fixed;
+    display: inline;
+    margin-left: 30%;
+    margin-right: 30%;
+
+    
+    width: 40%;
+    
+}
+
+a:link, a:visited, a:hover, a:active {
+
+    color: white;
+}
